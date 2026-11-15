@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic-Tac-Toe - Login</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 80px;
+            margin: 0;
+        }
+        .box {
+            border: 1px solid #ffffff;
+            padding: 20px;
+            width: 280px;
+        }
+        input, button {
+            background-color: #000000;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            padding: 8px;
+            margin-top: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            font-family: monospace;
+        }
+        button {
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>TIC-TAC-TOE</h1>
+    <div class="box">
+        <form action="/cgi-bin/tictactoe.cgi" method="POST">
+            <input type="text" name="username" placeholder="Username" required maxlength="16" pattern="[a-zA-Z0-9_]+">
+            <input type="password" name="password" placeholder="Password" required maxlength="32">
+            <div class="buttons">
+                <button type="submit" name="action" value="login">Login</button>
+                <button type="submit" name="action" value="register">Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
